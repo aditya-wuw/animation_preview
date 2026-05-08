@@ -22,6 +22,8 @@ config/icon="uid://bskr1sticycor"
 
 window/size/viewport_width=800
 window/size/viewport_height=600
+window/size/borderless=true
+window/vsync/vsync_mode=2
 
 [dotnet]
 

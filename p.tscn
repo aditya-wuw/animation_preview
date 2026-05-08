@@ -1,10 +1,45 @@
 [gd_scene format=3 uid="uid://b1jn1sglkqyqu"]
 
-[ext_resource type="Script" uid="uid://56fwqyfxgch3" path="res://Prev/anim_preview.cs" id="1_jh65p"]
+[ext_resource type="Script" uid="uid://56fwqyfxgch3" path="res://Prev/Scripts/anim_preview.cs" id="1_jh65p"]
+[ext_resource type="PackedScene" uid="uid://cbhve6j3brnxv" path="res://Prev/GesturePack.glb" id="2_7efin"]
+[ext_resource type="Script" uid="uid://db6oc3iyydqi" path="res://Prev/Scripts/RotateModel.cs" id="2_b2lq7"]
+[ext_resource type="FontFile" uid="uid://dhahim84bxh6b" path="res://fonts/Roboto/static/Roboto_Condensed-Light.ttf" id="2_c6a67"]
 
-[sub_resource type="SystemFont" id="SystemFont_7efin"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7efin"]
+sky_top_color = Color(0.6584818, 0.7589213, 0.8350694, 1)
+sky_horizon_color = Color(0.8351233, 0.8523836, 0.8858595, 1)
+ground_bottom_color = Color(0.063207224, 0.031808846, 0.08956423, 1)
+ground_horizon_color = Color(0.8351233, 0.8523836, 0.8858595, 1)
+
+[sub_resource type="Sky" id="Sky_b2lq7"]
+sky_material = SubResource("ProceduralSkyMaterial_7efin")
+
+[sub_resource type="Environment" id="Environment_c6a67"]
+background_mode = 2
+sky = SubResource("Sky_b2lq7")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7efin"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b2lq7"]
+shading_mode = 0
+albedo_color = Color(0.104428865, 0.00013608368, 0.19435486, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_c6a67"]
+material = SubResource("StandardMaterial3D_b2lq7")
+size = Vector2(30, 30)
 
 [node name="Preview" type="Node3D" unique_id=315291852]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1364899188]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+light_energy = 1.55
+shadow_enabled = true
+directional_shadow_max_distance = 995.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1876203324]
+environment = SubResource("Environment_c6a67")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1052306732]
 script = ExtResource("1_jh65p")
@@ -20,106 +55,380 @@ grow_horizontal = 2
 size_flags_horizontal = 4
 text = "Preview"
 
-[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=52242061]
-offset_bottom = 40.0
+[node name="Scroll" type="ScrollContainer" parent="CanvasLayer" unique_id=969325982]
+offset_top = 30.0
+offset_right = 163.0
+offset_bottom = 317.0
 
-[node name="HBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel" unique_id=1317303556]
-layout_mode = 0
-offset_right = 272.0
-offset_bottom = 171.0
+[node name="HBoxContainer" type="VBoxContainer" parent="CanvasLayer/Scroll" unique_id=1317303556]
+layout_mode = 2
 theme_override_constants/separation = 1
 
-[node name="Button" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=1643280219]
+[node name="Button" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=1643280219]
+texture_filter = 3
 layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_7efin")
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
 text = "Walkto walk again to when bro lol"
 alignment = 0
 text_direction = 1
 
-[node name="Button2" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=492749335]
+[node name="Button2" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=437796209]
+texture_filter = 3
 layout_mode = 2
-text = "Walk"
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
 
-[node name="Button3" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=1055809235]
+[node name="Button3" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=1350556803]
+texture_filter = 3
 layout_mode = 2
-text = "Walk"
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
 
-[node name="Button4" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=973004887]
+[node name="Button4" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=214199001]
+texture_filter = 3
 layout_mode = 2
-text = "Walk"
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
 
-[node name="Button5" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=1959759087]
+[node name="Button5" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=200973990]
+texture_filter = 3
 layout_mode = 2
-text = "Walk"
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
 
-[node name="Button6" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=1910687546]
+[node name="Button6" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=1866180996]
+texture_filter = 3
 layout_mode = 2
-text = "Walk"
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
 
-[node name="Button7" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=27260349]
+[node name="Button7" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=347300729]
+texture_filter = 3
 layout_mode = 2
-text = "Walk"
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
 
-[node name="Button8" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=1075650982]
+[node name="Button8" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=600352299]
+texture_filter = 3
 layout_mode = 2
-text = "Walk"
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
 
-[node name="Button9" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=1034253991]
+[node name="Button9" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=663230025]
+texture_filter = 3
 layout_mode = 2
-text = "Walk"
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
 
-[node name="Button10" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=2065544121]
+[node name="Button10" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=1410690436]
+texture_filter = 3
 layout_mode = 2
-text = "Walk"
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
 
-[node name="Button11" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=45701700]
+[node name="Button11" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=1281168867]
+texture_filter = 3
 layout_mode = 2
-text = "Walk"
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
 
-[node name="Button12" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=1606631877]
+[node name="Button12" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=1608168484]
+texture_filter = 3
 layout_mode = 2
-text = "Walk"
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
 
-[node name="Button13" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=1187764646]
+[node name="Button13" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=1923930631]
+texture_filter = 3
 layout_mode = 2
-text = "Walk"
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
 
-[node name="Button14" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=981114084]
+[node name="Button14" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=1834521286]
+texture_filter = 3
 layout_mode = 2
-text = "Walk"
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
 
-[node name="Button15" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=541757700]
+[node name="Button15" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=1950364679]
+texture_filter = 3
 layout_mode = 2
-text = "Walk"
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
 
-[node name="Button16" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=124615352]
+[node name="Button16" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=1876017472]
+texture_filter = 3
 layout_mode = 2
-text = "Walk"
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
 
-[node name="Button17" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=1903094108]
+[node name="Button17" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=1151864902]
+texture_filter = 3
 layout_mode = 2
-text = "Walk"
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
 
-[node name="Button18" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=773463841]
+[node name="Button18" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=2082604122]
+texture_filter = 3
 layout_mode = 2
-text = "Walk"
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
 
-[node name="Button19" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=220911685]
+[node name="Button19" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=203768965]
+texture_filter = 3
 layout_mode = 2
-text = "Walk"
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
 
-[node name="Button20" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=637232215]
+[node name="Button20" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=1174893696]
+texture_filter = 3
 layout_mode = 2
-text = "Walk"
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
 
-[node name="Button21" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=769756188]
+[node name="Button21" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=1417109217]
+texture_filter = 3
 layout_mode = 2
-text = "Walk"
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
 
-[node name="Button22" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=649830149]
+[node name="Button22" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=1110744844]
+texture_filter = 3
 layout_mode = 2
-text = "Walk"
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
 
-[node name="Button23" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=1906725202]
+[node name="Button23" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=711581024]
+texture_filter = 3
 layout_mode = 2
-text = "Walk"
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
+
+[node name="Button24" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=902802217]
+texture_filter = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
+
+[node name="Button25" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=1585040768]
+texture_filter = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
+
+[node name="Button26" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=71539809]
+texture_filter = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
+
+[node name="Button27" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=149765709]
+texture_filter = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
+
+[node name="Button28" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=783242767]
+texture_filter = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
+
+[node name="Button29" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=2080135600]
+texture_filter = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
+
+[node name="Button30" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=5956787]
+texture_filter = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
+
+[node name="Button31" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=1922326440]
+texture_filter = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
+
+[node name="Button32" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=1170020568]
+texture_filter = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
+
+[node name="Button33" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=973589170]
+texture_filter = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
+
+[node name="Button34" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=716620143]
+texture_filter = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
+
+[node name="Button35" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=1665998568]
+texture_filter = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
+
+[node name="Button36" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=1198872117]
+texture_filter = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
+
+[node name="Button37" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=1245231759]
+texture_filter = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
+
+[node name="Button38" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=126180069]
+texture_filter = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
+
+[node name="Button39" type="Button" parent="CanvasLayer/Scroll/HBoxContainer" unique_id=1109245859]
+texture_filter = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_c6a67")
+theme_override_font_sizes/font_size = 8
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
+
+[node name="Model" type="Node3D" parent="." unique_id=1988907515 node_paths=PackedStringArray("Model")]
+script = ExtResource("2_b2lq7")
+Model = NodePath("GesturePack")
+
+[node name="GesturePack" parent="Model" unique_id=1713046709 instance=ExtResource("2_7efin")]
+
+[node name="Alpha_Joints" parent="Model/GesturePack/Armature/Skeleton3D" parent_id_path=PackedInt32Array(1713046709, 1011873548) index="0" unique_id=1258274582]
+surface_material_override/0 = SubResource("StandardMaterial3D_7efin")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=189446790]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1493223, 2.32)
+
+[node name="bg" type="MeshInstance3D" parent="." unique_id=1792611688]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 1.285, -1.625)
+mesh = SubResource("PlaneMesh_c6a67")
+
+[editable path="Model/GesturePack"]

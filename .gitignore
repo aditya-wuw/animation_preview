@@ -16,5 +16,6 @@ mono_crash.*.json
 
 # Binary 3D assets
 *.glb
-*.glb.import
+*.import
 *.gltf
+*.uid
