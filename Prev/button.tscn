@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cgyrjwus6wyxi"]
+
+[ext_resource type="FontFile" uid="uid://dhahim84bxh6b" path="res://fonts/Roboto/static/Roboto_Condensed-Light.ttf" id="1_yky0n"]
+
+[node name="Button" type="Button" unique_id=499841530]
+texture_filter = 3
+theme_override_fonts/font = ExtResource("1_yky0n")
+theme_override_font_sizes/font_size = 20
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
