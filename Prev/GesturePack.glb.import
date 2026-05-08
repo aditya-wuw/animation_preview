@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cnnbnkqk4lr8g"
-path="res://.godot/imported/GesturePack.glb-c8623145ea99e0575e1766ce6dd5ecf7.scn"
+path="res://.godot/imported/GesturePack.glb-e18ae76db530a86893d8b4c95a18d500.scn"
 
 [deps]
 
-source_file="res://GesturePack.glb"
-dest_files=["res://.godot/imported/GesturePack.glb-c8623145ea99e0575e1766ce6dd5ecf7.scn"]
+source_file="res://Prev/GesturePack.glb"
+dest_files=["res://.godot/imported/GesturePack.glb-e18ae76db530a86893d8b4c95a18d500.scn"]
 
 [params]
 
