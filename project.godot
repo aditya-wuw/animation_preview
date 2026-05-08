@@ -11,13 +11,17 @@ config_version=5
 [application]
 
 config/name="Animation preview"
+config/version="0.0.0"
+run/main_scene="uid://b1jn1sglkqyqu"
 config/features=PackedStringArray("4.6", "C#", "Forward Plus")
-config/icon="res://icon.svg"
+run/max_fps=60
+boot_splash/image="uid://bskr1sticycor"
+config/icon="uid://bskr1sticycor"
 
 [display]
 
 window/size/viewport_width=800
-window/size/viewport_height=800
+window/size/viewport_height=600
 
 [dotnet]
 

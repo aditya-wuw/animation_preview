@@ -1,0 +1,125 @@
+[gd_scene format=3 uid="uid://b1jn1sglkqyqu"]
+
+[ext_resource type="Script" uid="uid://56fwqyfxgch3" path="res://Prev/anim_preview.cs" id="1_jh65p"]
+
+[sub_resource type="SystemFont" id="SystemFont_7efin"]
+
+[node name="Preview" type="Node3D" unique_id=315291852]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1052306732]
+script = ExtResource("1_jh65p")
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=791462694]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -31.0
+offset_right = 31.0
+offset_bottom = 23.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+text = "Preview"
+
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=52242061]
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel" unique_id=1317303556]
+layout_mode = 0
+offset_right = 272.0
+offset_bottom = 171.0
+theme_override_constants/separation = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=1643280219]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_7efin")
+text = "Walkto walk again to when bro lol"
+alignment = 0
+text_direction = 1
+
+[node name="Button2" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=492749335]
+layout_mode = 2
+text = "Walk"
+
+[node name="Button3" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=1055809235]
+layout_mode = 2
+text = "Walk"
+
+[node name="Button4" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=973004887]
+layout_mode = 2
+text = "Walk"
+
+[node name="Button5" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=1959759087]
+layout_mode = 2
+text = "Walk"
+
+[node name="Button6" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=1910687546]
+layout_mode = 2
+text = "Walk"
+
+[node name="Button7" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=27260349]
+layout_mode = 2
+text = "Walk"
+
+[node name="Button8" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=1075650982]
+layout_mode = 2
+text = "Walk"
+
+[node name="Button9" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=1034253991]
+layout_mode = 2
+text = "Walk"
+
+[node name="Button10" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=2065544121]
+layout_mode = 2
+text = "Walk"
+
+[node name="Button11" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=45701700]
+layout_mode = 2
+text = "Walk"
+
+[node name="Button12" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=1606631877]
+layout_mode = 2
+text = "Walk"
+
+[node name="Button13" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=1187764646]
+layout_mode = 2
+text = "Walk"
+
+[node name="Button14" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=981114084]
+layout_mode = 2
+text = "Walk"
+
+[node name="Button15" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=541757700]
+layout_mode = 2
+text = "Walk"
+
+[node name="Button16" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=124615352]
+layout_mode = 2
+text = "Walk"
+
+[node name="Button17" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=1903094108]
+layout_mode = 2
+text = "Walk"
+
+[node name="Button18" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=773463841]
+layout_mode = 2
+text = "Walk"
+
+[node name="Button19" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=220911685]
+layout_mode = 2
+text = "Walk"
+
+[node name="Button20" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=637232215]
+layout_mode = 2
+text = "Walk"
+
+[node name="Button21" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=769756188]
+layout_mode = 2
+text = "Walk"
+
+[node name="Button22" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=649830149]
+layout_mode = 2
+text = "Walk"
+
+[node name="Button23" type="Button" parent="CanvasLayer/Panel/HBoxContainer" unique_id=1906725202]
+layout_mode = 2
+text = "Walk"
