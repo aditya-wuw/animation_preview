@@ -1,11 +1,10 @@
 using Godot;
 using System;
+using System.Linq;
 
 public partial class anim_preview : CanvasLayer
 {
-	public override void _Ready()
-	{
-		string smugCat = @"
+   const string smugCat = @"
        /\                ______
       /  \______________/      \
      /                          \
@@ -15,10 +14,45 @@ public partial class anim_preview : CanvasLayer
    |                                /
    |_______________________________/  Null Team's :3
 ";
-		GD.Print(smugCat);
-	}
+   [Export] private Node3D Model;
+   [Export] private PackedScene BtnScene;
+   [Export] private VBoxContainer AnimContainer;
+   [Export] private LineEdit SearchBar;
+   private string[] Anims;
+   private AnimationPlayer AnimPlayer;
+   public override void _Ready()
+   {
+	  GD.Print(smugCat);
+	  SearchBar.TextChanged += SearchTerms;
+	  AnimPlayer = Model.GetNode<AnimationPlayer>("AnimationPlayer");
+	  Anims = AnimPlayer.GetAnimationList();
+	  DisplayAnimations(Anims);
+   }
 
-	public override void _Process(double delta)
-	{
-	}
+   private void DisplayAnimations(string[] displayList)
+   {
+	  AnimContainer.GetChildren().OfType<Button>().ToList().ForEach(b => b?.QueueFree());
+	  foreach (string anim in displayList)
+	  {
+		 Button newBTN = BtnScene.Instantiate<Button>();
+		 newBTN.Text = anim;
+		 newBTN.Pressed += () => PlayAnimation(anim);
+		 AnimContainer.AddChild(newBTN);
+	  }
+   }
+
+
+   private void SearchTerms(string Terms)
+   {
+	  GD.Print(Terms);
+	  string[] filtered = [.. Anims.Where(s => s.Contains(Terms, StringComparison.CurrentCultureIgnoreCase))];
+	  DisplayAnimations(filtered);
+   }
+
+   private void PlayAnimation(string anim)
+   {
+	  AnimPlayer.Play(anim);
+   }
+
+
 }
