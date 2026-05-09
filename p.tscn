@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b1jn1sglkqyqu"]
 
-[ext_resource type="Script" uid="uid://56fwqyfxgch3" path="res://Prev/Scripts/anim_preview.cs" id="1_jh65p"]
+[ext_resource type="Script" uid="uid://56fwqyfxgch3" path="res://Prev/Scripts/AnimPreview.cs" id="1_jh65p"]
 [ext_resource type="PackedScene" uid="uid://cbhve6j3brnxv" path="res://Prev/GesturePack.glb" id="2_7efin"]
 [ext_resource type="Script" uid="uid://db6oc3iyydqi" path="res://Prev/Scripts/RotateModel.cs" id="2_b2lq7"]
 [ext_resource type="FontFile" uid="uid://dhahim84bxh6b" path="res://fonts/Roboto/static/Roboto_Condensed-Light.ttf" id="2_c6a67"]
@@ -63,8 +63,8 @@ text = "Preview"
 [node name="PreviewList" type="PanelContainer" parent="CanvasLayer" unique_id=945955155]
 offset_left = 10.0
 offset_top = 10.0
-offset_right = 305.0
-offset_bottom = 419.0
+offset_right = 357.0
+offset_bottom = 376.12
 
 [node name="HBoxContainer" type="VBoxContainer" parent="CanvasLayer/PreviewList" unique_id=39164485]
 layout_mode = 2
@@ -135,7 +135,7 @@ Model = NodePath("GesturePack")
 surface_material_override/0 = SubResource("StandardMaterial3D_7efin")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=189446790]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1493223, 2.32)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.964, 2.32)
 
 [node name="bg" type="MeshInstance3D" parent="." unique_id=1792611688]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 1.285, -1.625)
