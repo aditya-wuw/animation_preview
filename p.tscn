@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://b1jn1sglkqyqu"]
 
-[ext_resource type="Script" uid="uid://56fwqyfxgch3" path="res://Prev/Scripts/AnimPreview.cs" id="1_jh65p"]
+[ext_resource type="Script" uid="uid://bjsekyti2tcp8" path="res://Prev/Scripts/anim_preview.gd" id="1_lgpln"]
 [ext_resource type="PackedScene" uid="uid://cbhve6j3brnxv" path="res://Prev/GesturePack.glb" id="2_7efin"]
-[ext_resource type="Script" uid="uid://db6oc3iyydqi" path="res://Prev/Scripts/RotateModel.cs" id="2_b2lq7"]
 [ext_resource type="FontFile" uid="uid://dhahim84bxh6b" path="res://fonts/Roboto/static/Roboto_Condensed-Light.ttf" id="2_c6a67"]
 [ext_resource type="PackedScene" uid="uid://cgyrjwus6wyxi" path="res://Prev/UI/button.tscn" id="3_lgpln"]
+[ext_resource type="Script" path="res://Prev/Scripts/rotate_model.gd" id="4_f8pyq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7efin"]
 sky_top_color = Color(0.6584818, 0.7589213, 0.8350694, 1)
@@ -42,12 +42,12 @@ directional_shadow_max_distance = 995.0
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1876203324]
 environment = SubResource("Environment_c6a67")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1052306732 node_paths=PackedStringArray("Model", "AnimContainer", "SearchBar")]
-script = ExtResource("1_jh65p")
-Model = NodePath("../Model/GesturePack")
-BtnScene = ExtResource("3_lgpln")
-AnimContainer = NodePath("PreviewList/HBoxContainer/Scroll/AnimContainer")
-SearchBar = NodePath("PreviewList/HBoxContainer/SearchBar")
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1052306732 node_paths=PackedStringArray("model", "anim_container", "search_bar")]
+script = ExtResource("1_lgpln")
+model = NodePath("../Model/GesturePack")
+btn_scene = ExtResource("3_lgpln")
+anim_container = NodePath("PreviewList/HBoxContainer/Scroll/AnimContainer")
+search_bar = NodePath("PreviewList/HBoxContainer/SearchBar")
 
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=791462694]
 anchors_preset = 5
@@ -125,9 +125,9 @@ layout_mode = 2
 [node name="Button12" parent="CanvasLayer/PreviewList/HBoxContainer/Scroll/AnimContainer" unique_id=1486311282 instance=ExtResource("3_lgpln")]
 layout_mode = 2
 
-[node name="Model" type="Node3D" parent="." unique_id=1988907515 node_paths=PackedStringArray("Model")]
-script = ExtResource("2_b2lq7")
-Model = NodePath("GesturePack")
+[node name="Model" type="Node3D" parent="." unique_id=1988907515 node_paths=PackedStringArray("model")]
+script = ExtResource("4_f8pyq")
+model = NodePath("GesturePack")
 
 [node name="GesturePack" parent="Model" unique_id=1713046709 instance=ExtResource("2_7efin")]
 

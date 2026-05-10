@@ -15,10 +15,10 @@ config/version="0.0.0"
 run/main_scene="uid://b1jn1sglkqyqu"
 config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 run/max_fps=60
-boot_splash/bg_color=Color(0.6384899, 0.6384899, 0.6384899, 1)
+boot_splash/bg_color=Color(0.1377911, 0.008296086, 0.19399256, 1)
 boot_splash/image="uid://bskr1sticycor"
 config/icon="uid://bskr1sticycor"
-boot_splash/minimum_display_time=3
+boot_splash/minimum_display_time=60
 
 [display]
 
