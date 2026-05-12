@@ -18,6 +18,7 @@ const SMUG_CAT = r"
 
 var anims: PackedStringArray
 var anim_player: AnimationPlayer
+@onready var anim_count: Label = $anim_count
 
 func _ready():
 	print(SMUG_CAT)
@@ -27,10 +28,11 @@ func _ready():
 	display_animations(anims)
 
 func display_animations(display_list: Array):
+	#print(display_list)
 	for child in anim_container.get_children():
 		if child is Button:
 			child.queue_free()
-	
+	anim_count.text = str(display_list.size())
 	for anim_name in display_list:
 		var new_btn = btn_scene.instantiate() as Button
 		new_btn.text = anim_name
