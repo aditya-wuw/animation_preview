@@ -4,7 +4,7 @@
 
 [node name="Button" type="Button" unique_id=499841530]
 theme_override_fonts/font = ExtResource("1_yky0n")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 30
 text = "Walkto walk again to when bro lol"
 alignment = 0
 text_direction = 1

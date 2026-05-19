@@ -8,7 +8,7 @@ const SMUG_CAT = r"
    |            \    /                |
    |   @         \/\/       @        /
    |                                /
-   |_______________________________/  Null Team's :3
+   |_______________________________/  Smug Cat's
 "
 
 @export var model: Node3D
